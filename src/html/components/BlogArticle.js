@@ -1,5 +1,4 @@
 import React from 'react'
-import CmsContent from '../includes/CmsContent'
 
 function BlogArticle(c) {    
     return (
@@ -21,7 +20,7 @@ function BlogArticle(c) {
                         </ul>
                     </div>
                     <div className="c-blog-article__content-container cms-content">
-                        <CmsContent />
+                        
                     </div>
                     {                     
                         <script type="application/ld+json">

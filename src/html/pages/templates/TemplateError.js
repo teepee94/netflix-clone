@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet"
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Masthead from '../../components/Masthead'
-import Content from '../../components/Content'
 
 function TemplateError() {
 	return (
@@ -15,7 +14,6 @@ function TemplateError() {
 		<main id="main-content">
 			<article>
 				<Masthead title="Page Error" />
-				<Content error />
 			</article>
 		</main>
 		<Footer />

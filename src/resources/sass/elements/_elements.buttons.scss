@@ -16,7 +16,7 @@
     @include para;
     background-color: $color-btn-bg;
     border: solid 1px $color-btn-border;
-    border-radius: 0;
+    border-radius: $unit*0.5;
     color: $color-btn-text;
     cursor: pointer;
     display: inline-block;
@@ -58,84 +58,27 @@
 // Purpose: Enhances or removes styles from default buttons
 //
 //
-// 1. Button using the primary brand colours
-// 2. Button using the secondary brand colours
-// 3. Large button
-// 4. Small button
-// 5. Compact button
+// 1. Button using the grey colours
 //
 // -----------------------------------------------------------------------------
 
 // 1
-.c-btn--primary {
-    background-color: $color-btn-primary-bg;
-    border-color: $color-btn-primary-border;
-    color: $color-btn-primary-text;
+.c-btn--grey {
+    background-color: $color-btn-grey-bg;
+    border-color: $color-btn-grey-border;
+    color: $color-btn-grey-text;
 
     svg {
-        fill: $color-btn-primary-text;
+        fill: $color-btn-grey-text;
     }
 
     html.no-touchevents &:hover {
-        background-color: $color-btn-primary-hover-bg;
-        border-color: $color-btn-primary-hover-border;
-        color: $color-btn-primary-hover-text;
+        background-color: $color-btn-grey-hover-bg;
+        border-color: $color-btn-grey-hover-border;
+        color: $color-btn-grey-hover-text;
 
         svg {
-            fill: $color-btn-primary-hover-text;
+            fill: $color-btn-grey-hover-text;
         }
-    }
-}
-
-// 2
-.c-btn--secondary {
-    background-color: $color-btn-secondary-bg;
-    border-color: $color-btn-secondary-border;
-    color: $color-btn-secondary-text;
-
-    svg {
-        fill: $color-btn-secondary-text;
-    }
-
-    html.no-touchevents &:hover {
-        background-color: $color-btn-secondary-hover-bg;
-        border-color: $color-btn-secondary-hover-border;
-        color: $color-btn-secondary-hover-text;
-
-        svg {
-            fill: $color-btn-secondary-hover-text;
-        }
-    }
-}
-
-// 3
-.c-btn--large {
-    @include para-large;
-    padding: $unit*2;
-
-    @include media-breakpoint-up(lg) {
-        padding: $unit*2.5;
-    }
-}
-
-// 4
-.c-btn--small {
-    @include para;
-    line-height: 100%;
-    padding: $unit;
-
-    @include media-breakpoint-up(lg) {
-        padding: $unit*1.5;
-    }
-}
-
-// 5
-.c-btn--compact {
-    @include para-small;
-    line-height: 100%;
-    padding: $unit*0.5;
-
-    @include media-breakpoint-up(lg) {
-        padding: $unit;
     }
 }

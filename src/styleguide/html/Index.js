@@ -6,7 +6,7 @@ function Index(c) {
         <div className="container" style={{color: c.styleguideTextColor}}>
             <div className="row">
                 <div className="style-logo">
-                    <img src="/resources/images/test/client-logo.svg" alt=""/>
+                    <img src="/resources/images/test/netflix-logo.avif" alt=""/>
                 </div>
             </div>
             <div className="row">
@@ -32,26 +32,12 @@ function Index(c) {
                 <div className="style-section">
                     <h2 className="heading-h1">Components</h2>
                     <ul style={{marginTop: "20px"}}>
-                        <li><a href="/component-accordion">Accordion</a></li>
-                        <li><a href="/component-blockquote">Blockquote</a></li>
                         <li><a href="/component-blog-article">Blog Article</a></li>
                         <li><a href="/component-blog-listing">Blog Listing</a></li>
-                        <li><a href="/component-breadcrumb">Breadcrumb</a></li>
-                        <li><a href="/component-cta">Call To Action</a></li>
-                        <li><a href="/component-carousel">Carousel</a></li>
-                        <li><a href="/component-contact">Contact</a></li>
-                        <li><a href="/component-content">Content</a></li>
-                        <li><a href="/component-content-media">Content & Media</a></li>
                         <li><a href="/component-cookiebar">Cookie Bar</a></li>
                         <li><a href="/component-footer">Footer</a></li>
-                        <li><a href="/component-form">Forms</a></li>
-                        <li><a href="/component-logos">Logos</a></li>
                         <li><a href="/component-masthead">Masthead</a></li>
-                        <li><a href="/component-media">Media</a></li>
                         <li><a href="/component-navbar">Navbar</a></li>
-                        <li><a href="/component-newsletter">Newsletter</a></li>
-                        <li><a href="/component-pagination">Pagination</a></li>
-                        <li><a href="/component-team-listing">Team Listing</a></li>
                     </ul>
                 </div>
             </div>
