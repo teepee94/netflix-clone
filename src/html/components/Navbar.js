@@ -40,7 +40,7 @@ function Navbar() {
 								</li>
 								<li className="c-navbar__icon-list-item">
 									<div className="c-navbar__account-container">
-										<img src="/resources/images/test/navbar-profile-icon.png" alt="" />
+										<img src="/resources/images/navbar-profile-icon.png" alt="" />
 									</div>
 								</li>
 							</ul>
