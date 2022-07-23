@@ -1,3 +1,5 @@
+This is a react app using the movie database api https://www.themoviedb.org/?language=en-GB
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
