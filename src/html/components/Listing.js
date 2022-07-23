@@ -18,8 +18,6 @@ function Listing(c) {
 		getListingItems();
 	}, [])
 
-    console.log(listingItems);
-
     return (
         <div className={`c-listing ${c.class ? c.class : "" }`}>
             <div className="container-fluid">
@@ -31,16 +29,14 @@ function Listing(c) {
                 </div> : ""
                 }
                 <div className="row">
-                    {
-                        
-                        listingItems.map((listingItem, index) => (
-                            <ListingItem title={listingItem.name} image={c.featured ? listingItem.poster_path : listingItem.backdrop_path} number={index+1} featured={c.featured} />
-                        ))
-                    }
+                    {listingItems.map((listingItem, index) => (
+                        <ListingItem key={listingItem.id} title={listingItem.name} image={c.featured ? listingItem.poster_path : listingItem.backdrop_path} number={index+1} featured={c.featured} />
+                    ))}
                 </div>
             </div>
         </div>
     )
+
 }
 
 export default Listing

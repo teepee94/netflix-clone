@@ -6,6 +6,10 @@ import Masthead from '../../components/Masthead'
 import Listing from '../../components/Listing'
 import axios from "../../../resources/js/TMDB/Axios"
 import requests from '../../../resources/js/TMDB/Requests'
+import gsap from "gsap"
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 function TemplateHomepage() {
 
@@ -15,10 +19,10 @@ function TemplateHomepage() {
 		async function getMastheadData() {
 			const request = await axios.get(requests.netflixOriginals);
 
+			const index = Math.floor(Math.random() * request.data.results.length - 1)
+
 			setMasthead(
-				request.data.results[
-					Math.floor(Math.random() * request.data.results.length - 1)
-				]
+				request.data.results[index]
 			);
 
 			return request;
@@ -26,9 +30,25 @@ function TemplateHomepage() {
 
 		getMastheadData();
 	}, [])
+
+	useEffect(() => {
+		const tl = gsap.timeline({
+		  scrollTrigger: {
+			trigger: "#js-masthead",
+			start: "top top",
+			end: "bottom top",
+			scrub: true
+		  }
+		});
+		
+		gsap.utils.toArray(".parallax").forEach(layer => {
+		  const depth = layer.dataset.depth;
+		  const movement = (layer.offsetHeight * depth)
+		  tl.to(layer, {y: movement, ease: "none"}, 0)
+		});
+		}, [])
 	
 
-	console.log(masthead);
 	return (
 		<>
 		<Helmet>

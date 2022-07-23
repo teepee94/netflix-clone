@@ -66,3 +66,18 @@ a[href="#main-content"]{
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none !important;
 }
+
+.js-media-visibility {
+    background: transparent;
+
+    >*, &::after {
+        opacity: 0;
+        transition: opacity 0.7s;
+    }
+
+    &.is-visible {
+        >*, &::after {
+            opacity: 1;
+        }
+    }
+}

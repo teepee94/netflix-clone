@@ -24,10 +24,10 @@ function Navbar() {
 							<div className="c-navbar__links" id="js-navbar-links">
 								<ul className="c-navbar__list">
 									<li className="c-navbar__item"><a href="template-homepage" className="c-navbar__link">Home</a></li>
-									<li className="c-navbar__item"><a href="template-blog-index" className="c-navbar__link is-current">Series</a></li>
-									<li className="c-navbar__item"><a href="template-team" className="c-navbar__link">Films</a></li>
-									<li className="c-navbar__item"><a href="template-contact" className="c-navbar__link">New & Popular</a></li>
-									<li className="c-navbar__item"><a href="template-contact" className="c-navbar__link">My List</a></li>
+									<li className="c-navbar__item"><a href="template-homepage" className="c-navbar__link is-current">Series</a></li>
+									<li className="c-navbar__item"><a href="template-homepage" className="c-navbar__link">Films</a></li>
+									<li className="c-navbar__item"><a href="template-homepage" className="c-navbar__link">New & Popular</a></li>
+									<li className="c-navbar__item"><a href="template-homepage" className="c-navbar__link">My List</a></li>
 								</ul>
 							</div>
 						</div>

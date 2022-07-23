@@ -34,13 +34,10 @@
 @import "elements/elements.headingspara"; // This has to go first
 @import "elements/elements.links"; // This has to go second
 @import "elements/elements.buttons";
-@import "elements/elements.forms";
 @import "elements/elements.images";
 @import "elements/elements.page";
 
 // 6
-@import "components/components.blog-article";
-@import "components/components.cookiebar";
 @import "components/components.footer";
 @import "components/components.listing";
 @import "components/components.masthead";

@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react'
-import { FECookiebar } from '../../resources/js/CookiebarFE'
+import React from 'react'
 import FacebookIcon from '../../resources/icons/FacebookIcon'
 import InstagramIcon from '../../resources/icons/InstagramIcon'
 import TwitterIcon from '../../resources/icons/TwitterIcon'
 import YoutubeIcon from '../../resources/icons/YoutubeIcon'
-import Cookiebar from "../components/Cookiebar"
 
 function Footer(c) {
-
-    useEffect(() => {
-        FECookiebar.Init()
-    }, [])
     
     return (
         <>
@@ -86,7 +80,6 @@ function Footer(c) {
                 </div>
             </div>
         </footer>
-        <Cookiebar />
         </>
     )
 }
