@@ -1,0 +1,190 @@
+// =============================================================================
+// CMS
+// =============================================================================
+
+// CMS Content
+// -----------------------------------------------------------------------------
+//
+// Purpose: Used wherever editable CMS content is required - keeps the spacing nice & consistent :)
+//
+//
+// 1. Remove the top margin of the first element
+// 2. Add more space above the headings
+// 3. List styling - using the marker selector so we can make the bullets a different colour
+// 4. Add margin to the top of wrapper that gets added to youtube/vimeo videos when using the jQuery FitVid plugin
+// 5. Change text colour to use brand primary/secondary colour
+// 6. Footnote text (really small text)
+// 7. Table styling - will scroll on mobile if table is too long for viewport
+// 8. Blockquote styling
+//
+// -----------------------------------------------------------------------------
+
+.cms-content {
+    // 1
+    :first-child {
+        margin-top: 0;
+    }
+
+    h1 {
+        @include heading-h1;
+    }
+
+    h2 {
+        @include heading-h2;
+    }
+
+    h3 {
+        @include heading-h3;
+    }
+
+    h4 {
+        @include heading-h4;
+    }
+
+    h5 {
+        @include heading-h5;
+    }
+
+    // 2
+    h1, h2, h3, h4, h5 {
+        margin-top: $unit*4;
+    }
+
+    p, ul, ol, blockquote, table {
+        margin-top: $unit*2;
+    }
+
+    // 3
+    ul, ol {
+        @include para;
+        display: block;
+        list-style-position: outside;
+        padding-left: 2.5rem;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    li {
+        display: list-item;
+
+        &::marker {
+            color: currentColor;
+            font-weight: 700;
+        }
+    }
+
+    img {
+        height: auto !important;
+        margin-bottom: $unit*2;
+        margin-top: $unit*4;
+        max-width: 100% !important;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    sub {
+        font-size: 0.8em;
+        vertical-align: sub;
+    }
+
+    sup {
+        font-size: 0.8em;
+        vertical-align: super;
+    }
+
+    a {
+        @include anchor-reverse;
+    }
+
+    .u-text-big {
+        @include para-large;
+    }
+
+    .u-text-small {
+        @include para-small;
+    }
+
+    // 4
+    .fluid-width-video-wrapper {
+        margin: $unit*3 0;
+    }
+
+    // 5
+    .u-highlight-primary {
+        color: $color-brand-primary;
+    }
+
+    .u-highlight-secondary {
+        color: $color-brand-secondary;
+    }
+
+    // 6
+    p.footnote {
+        @include font-size(1.0);
+        line-height: 140%;
+
+        @include media-breakpoint-up(md) {
+            @include font-size(1.1);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include font-size(1.2);
+        }
+    }
+
+    // 7
+    table {
+        @include para;
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        width: 100%;
+
+        th {
+            font-weight: 700;
+        }
+
+        th, td {
+            @include text-left;
+            border: 1px solid rgba($color-black, 0.3);
+            min-width: 150px;
+            padding: $unit $unit*1.5;
+            vertical-align: top;
+        }
+    }
+
+    // 8
+    blockquote {
+        color: $color-black;
+        max-width: 600px;
+
+        &::before, &::after {
+            @include heading-h3;
+        }
+
+        &::before {
+            content: "\201C";
+        }
+
+        &::after {
+            content: "\201D";
+        }
+
+        p {
+            @include heading-h3;
+            display: inline;
+        }
+    }
+}

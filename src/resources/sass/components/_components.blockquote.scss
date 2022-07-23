@@ -1,0 +1,70 @@
+// =============================================================================
+// Blockquote
+// =============================================================================
+
+// Blockquote
+// -----------------------------------------------------------------------------
+//
+// Purpose: Quotation with optional author credit
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+.c-blockquote {
+    @include component-margins;
+}
+
+.c-blockquote__content-container {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-up(md) {
+        @include make-col(10);
+        @include make-col-offset(0.5);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include make-col(8);
+        @include make-col-offset(1);
+    }
+}
+
+.c-blockquote__quote {
+    @include heading-h1;
+    margin-bottom: $unit;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $unit*2;
+    }
+
+    &::before {
+        content: "\201F";
+    }
+
+    &::after {
+        content: "\201D";
+    }
+}
+
+.c-blockquote__author {
+
+}
+
+.c-blockquote__author-name {
+
+}
+
+
+// Blockquote Modifiers
+// -----------------------------------------------------------------------------
+//
+// Purpose: Enhances or removes styles from default blockquote
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+// 1

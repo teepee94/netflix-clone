@@ -1,0 +1,114 @@
+// =============================================================================
+// Blog Article
+// =============================================================================
+
+// Blog Article
+// -----------------------------------------------------------------------------
+//
+// Purpose: An individual blog article
+//
+//
+// 1. Removes background of progress bar for FF & IE10+
+// 2. Removes default border of progress bar in FF/Opera
+// 3. Sets the color of the progress bar in IE10+
+// 4. Sets the progress bars background to transparent
+// 5. Sets the progress indicator in the bar to a color
+//
+// -----------------------------------------------------------------------------
+
+.c-blog-article {
+    @include component-margins;
+}
+
+.c-blog-article__progress-bar {
+    appearance: none;
+    background-color: transparent; // 1
+    border: none; // 2
+    color: $color-blog-article-progress-bar-bg; // 3
+    height: $unit*0.5;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-5--article-progress-bar;
+
+    // 4
+    &::-webkit-progress-bar {
+        background-color: transparent;
+    }
+
+    // 5
+    &::-webkit-progress-value {
+        background-color: $color-blog-article-progress-bar-bg;
+    }
+
+    &::-moz-progress-bar {
+        background-color: $color-blog-article-progress-bar-bg;
+    }
+}
+
+.c-blog-article__header-container {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-up(md) {
+        @include make-col(10);
+        @include make-col-offset(1);
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+}
+
+.c-blog-article__title {
+    @include heading-h0;
+}
+
+.c-blog-article__meta {
+    font-weight: 500;
+    margin-top: $unit;
+}
+
+.c-blog-article__meta-item {
+    @include para;
+}
+
+.c-blog-article__meta-item + .c-blog-article__meta-item {
+    margin-top: $unit;
+}
+
+.c-blog-article__category {
+    @include anchor-reverse;
+}
+
+.c-blog-article__content-container {
+    @include make-col-ready();
+    @include make-col(12);
+    margin-top: $unit*3;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(10);
+        @include make-col-offset(1);
+        margin-top: $unit*4;
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+}
+
+
+// Blog Article Modifiers
+// -----------------------------------------------------------------------------
+//
+// Purpose: Enhances or removes styles from default blog article
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+// 1

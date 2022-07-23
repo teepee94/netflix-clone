@@ -1,0 +1,76 @@
+// =============================================================================
+// Breadcrumb
+// =============================================================================
+
+// Breadcrumb
+// -----------------------------------------------------------------------------
+//
+// Purpose: Indicate the current page’s location within a navigational hierarchy
+//
+//
+// 1. Show all but the last item on smaller devices
+// 2. Using the before tag to add the separator
+//
+// -----------------------------------------------------------------------------
+
+.c-breadcrumb {
+    @include component-margins-bottom;
+}
+
+.c-breadcrumb__container {
+    @include make-col-ready();
+    @include make-col(12);
+}
+
+.c-breadcrumb__items {
+    display: inline-block;
+}
+
+.c-breadcrumb__item {
+    @include para;
+    display: inline-block;
+    margin-left: $unit;
+
+    @include media-breakpoint-down(sm) {
+        // 1
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    &:first-of-type {
+        margin-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    // 2
+    &::before {
+        content: "/";
+        display: inline-block;
+        padding-right: $unit;
+    }
+}
+
+.c-breadcrumb__link {
+    @include anchor-reverse;
+
+    &.is-active {
+        background-size: 0 1px;
+    }
+}
+
+
+// Breadcrumb Modifiers
+// -----------------------------------------------------------------------------
+//
+// Purpose: Enhances or removes styles from default breadcrumb
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+// 1

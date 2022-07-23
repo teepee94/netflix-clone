@@ -1,0 +1,90 @@
+// =============================================================================
+// Listing
+// =============================================================================
+
+// Listing
+// -----------------------------------------------------------------------------
+//
+// Purpose: A list of articles
+//
+//
+// 1. On small devices we want a top margin on all items apart from the first
+// 2. On large devices we want a top margin on all items apart from the top 2
+//
+// -----------------------------------------------------------------------------
+
+.c-listing {
+    @include component-margins;
+}
+
+.c-listing__item {
+    @include make-col-ready();
+    @include make-col(12);
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+    }
+
+    // 1
+    &:not(:first-of-type) {
+        @include media-breakpoint-down(sm) {
+            margin-top: $unit*4;
+        }
+    }
+
+    // 2
+    &:nth-of-type(n+3) {
+        @include media-breakpoint-up(md) {
+            margin-top: $unit*4;
+        }
+    }
+}
+
+.c-listing__item-link {
+    display: block;
+    text-decoration: none;
+
+    html.no-touchevents &:hover {
+        .c-listing__item-title {
+            background-size: 100% 2px;
+        }
+    }
+}
+
+.c-listing__item-media-container {
+
+}
+
+.c-listing__item-media-wrapper {
+
+}
+
+.c-listing__item-media {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.c-listing__item-title {
+    @include anchor(2px);
+    @include heading-h3;
+    display: inline-block;
+    margin-top: $unit;
+}
+
+.c-listing__item-summary {
+    margin-top: $unit;
+}
+
+
+// Listing Modifiers
+// -----------------------------------------------------------------------------
+//
+// Purpose: Enhances or removes styles from default listing
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+// 1

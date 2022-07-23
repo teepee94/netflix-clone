@@ -1,0 +1,64 @@
+// =============================================================================
+// Contact
+// =============================================================================
+
+// Contact
+// -----------------------------------------------------------------------------
+//
+// Purpose: Contact form & contact details
+//
+//
+// 1. 
+//
+// -----------------------------------------------------------------------------
+
+.c-contact {
+    @include component-margins;
+}
+
+.c-contact__details {
+    @include heading-h2;
+    @include make-col-ready;
+    @include make-col(12);
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+    }
+
+    a {
+        @include anchor-reverse(2px);
+    }
+}
+
+.c-contact__form {
+    @include make-col-ready;
+    @include make-col(12);
+    margin-top: $unit*4;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(6);
+        margin-top: 0;
+    }
+}
+
+.c-contact__form-title {
+    @include heading-h3;
+    margin-bottom: $unit;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $unit*2;
+    }
+}
+
+
+// Contact Modifiers
+// -----------------------------------------------------------------------------
+//
+// Purpose: Enhances or removes styles from default contact
+//
+//
+// 1.
+//
+// -----------------------------------------------------------------------------
+
+// 1
