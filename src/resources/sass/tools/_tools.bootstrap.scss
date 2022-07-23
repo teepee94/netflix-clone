@@ -28,6 +28,21 @@
 // 2
 .container-fluid {
 	@include make-container();
+
+	@include media-breakpoint-down(sm) {
+		padding-left: $unit;
+		padding-right: $unit;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding-left: $unit*4;
+		padding-right: $unit*4;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding-left: $unit*5;
+		padding-right: $unit*5;
+	}
 }
 
 // 3

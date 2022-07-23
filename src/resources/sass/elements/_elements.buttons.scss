@@ -20,7 +20,7 @@
     color: $color-btn-text;
     cursor: pointer;
     display: inline-block;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 100%;
     margin: 0;
     padding: $unit*1.5;
@@ -28,7 +28,7 @@
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 
     @include media-breakpoint-up(lg) {
-        padding: $unit*2;
+        padding: $unit*1.5 $unit*2;
     }
 
     // 1

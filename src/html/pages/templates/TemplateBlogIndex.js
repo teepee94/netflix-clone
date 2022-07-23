@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import BlogListing from '../../components/BlogListing'
+import Listing from '../../components/Listing'
 import Masthead from '../../components/Masthead'
 
 function TemplateBlogIndex() {
@@ -15,7 +15,7 @@ function TemplateBlogIndex() {
         <main id="main-content">
             <article>
                 <Masthead title="Blog Index" />
-                <BlogListing />
+                <Listing />
             </article>
         </main>
         <Footer />

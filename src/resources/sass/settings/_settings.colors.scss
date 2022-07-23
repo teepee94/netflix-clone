@@ -20,7 +20,7 @@ $color-black:                                           #000000;
 $color-brand-primary:                                   #E7111C;
 $color-brand-secondary:                                 #830007;
 $color-grey:                                            #767676;
-$color-grey-dark:                                       #3d3d3d;
+$color-grey-dark:                                       #141414;
 $color-grey-light:                                      #cccccc;
 $color-white:                                           #ffffff;
 
@@ -47,7 +47,7 @@ $color-social-pinterest:                                #bd081c;
 //
 // -----------------------------------------------------------------------------
 
-$color-page-bg:                                         $color-black;
+$color-page-bg:                                         $color-grey-dark;
 $color-page-focus-outline:                              #EE34D2;
 $color-page-text:                                       $color-white;
 $color-page-text-selection-bg:                          $color-brand-primary;
@@ -93,7 +93,7 @@ $color-accordion-item-icon-bg:                          $color-brand-primary;
 $color-blog-article-progress-bar-bg:                    $color-brand-primary;
 
 
-// Blog Listing
+// Listing
 // -----------------------------------------------------------------------------
 //
 // Purpose: All the blog listing colours
@@ -103,7 +103,7 @@ $color-blog-article-progress-bar-bg:                    $color-brand-primary;
 //
 // -----------------------------------------------------------------------------
 
-$color-blog-listing-filtered-border:					$color-brand-primary;
+$color-listing-filtered-border:					$color-brand-primary;
 
 
 // Breadcrumb
@@ -194,8 +194,8 @@ $color-cookiebar-text:                                  $color-brand-primary;
 //
 // -----------------------------------------------------------------------------
 
-$color-footer-bg:                                       $color-white;
-$color-footer-text:                                     $color-black;
+$color-footer-bg:                                       $color-grey-dark;
+$color-footer-text:                                     $color-grey-light;
 
 
 // Forms
@@ -219,19 +219,6 @@ $color-form-validation-text-error:                      $color-validation-error;
 $color-form-validation-bg-success:                      rgba($color-validation-success, 0.02);
 $color-form-validation-border-success:                  $color-validation-success;
 $color-form-validation-text-success:                    $color-validation-success;
-
-
-// Listing
-// -----------------------------------------------------------------------------
-//
-// Purpose: All the listing colours
-//
-//
-// 1.
-//
-// -----------------------------------------------------------------------------
-
-$color-listing-item-bg:                                 $color-grey;
 
 
 // Masthead
@@ -258,7 +245,8 @@ $color-masthead-text:                                   $color-white;
 //
 // -----------------------------------------------------------------------------
 
-$color-navbar-bg:                                       $color-black;
+$color-navbar-bg:                                       linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+$color-navbar-scroll-bg:                                $color-grey-dark;
 $color-navbar-dropdown-desktop-bg:                      $color-brand-primary;
 $color-navbar-dropdown-desktop-text:                    $color-white;
 $color-navbar-links-bg:                                 $color-brand-primary;

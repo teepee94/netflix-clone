@@ -37,8 +37,8 @@ $component-spacing: (
     sm: $unit*4, // 3
     md: $unit*6, // 4
     lg: $unit*6, // 5
-    xl: $unit*8, // 6
-    xxl: $unit*8 // 7
+    xl: $unit*6, // 6
+    xxl: $unit*6 // 7
 );
 
 @mixin component-margins($modifier: 1) {
@@ -56,6 +56,15 @@ $component-spacing: (
         @include media-breakpoint-up($breakpoint) {
             $spacing: map-get($component-spacing, $breakpoint);
             margin-bottom: $spacing*$modifier;
+        }
+    }
+}
+
+@mixin component-negative-margins-bottom($modifier: 1) {
+    @each $breakpoint in map-keys($component-spacing) {
+        @include media-breakpoint-up($breakpoint) {
+            $spacing: map-get($component-spacing, $breakpoint);
+            margin-bottom: $spacing*$modifier*-1;
         }
     }
 }

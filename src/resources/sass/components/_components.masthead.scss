@@ -13,14 +13,65 @@
 // -----------------------------------------------------------------------------
 
 .c-masthead {
-    @include component-margins;
+    @include component-negative-margins-bottom(3);
     background-color: $color-masthead-bg;
     color: $color-masthead-text;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+
+    &:before {
+        background: linear-gradient(180deg,hsla(0,0%,9%,0),#161616 73.95%,#161616);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        z-index: $z-index-1--masthead-media-overlay;
+    }
+
+    &:after {
+        background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 26.09%;
+        top: 0;
+        transition: opacity .5s;
+    }
+}
+
+.c-masthead__media-container {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.c-masthead__media-wrapper {
+
+}
+
+.c-masthead__media {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 
 .c-masthead__container {
+    @include component-padding-top(2);
+    @include component-padding-bottom(3);
     @include make-col-ready();
     @include make-col(11);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    z-index: $z-index-2--masthead-content;
 
     @include media-breakpoint-up(md) {
         @include make-col(8);
@@ -31,12 +82,28 @@
     }
 }
 
+.c-masthead__title-logo-container {
+
+}
+
 .c-masthead__title {
     @include heading-h0;
+    margin-top: $unit*2;
 }
 
 .c-masthead__summary {
+    @include para-large;
     margin-top: $unit*2;
+}
+
+.c-masthead__btn-container {
+    margin-top: $unit*2;
+}
+
+.c-masthead__btn {
+    &:nth-child(n+2) {
+        margin-left: $unit;
+    }
 }
 
 

@@ -1,42 +1,75 @@
 // =============================================================================
-// Listing
+// Blog Listing
 // =============================================================================
 
-// Listing
+// Blog Listing
 // -----------------------------------------------------------------------------
 //
-// Purpose: A list of articles
+// Purpose: A list of blog post articles
 //
 //
 // 1. On small devices we want a top margin on all items apart from the first
-// 2. On large devices we want a top margin on all items apart from the top 2
+// 2. On large devices we want a top margin on all items apart from the top 3
 //
 // -----------------------------------------------------------------------------
 
 .c-listing {
     @include component-margins;
+    overflow: hidden;
+    position: relative;
+    z-index: $z-index-3--listing;
+
+    .container-fluid {
+        padding-right: 0 !important;
+    }
+
+    .row {
+        &:last-of-type {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+    }
+}
+
+.c-listing__header {
+    @include make-col-ready();
+    @include make-col(12);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $unit;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: $unit*2;
+    }
+}
+
+.c-listing__header-title {
+    @include heading-h3;
 }
 
 .c-listing__item {
     @include make-col-ready();
-    @include make-col(12);
+    @include make-col(5.5);
+
+    @include media-breakpoint-up(sm) {
+        @include make-col(3.5);
+    }
 
     @include media-breakpoint-up(md) {
-        @include make-col(6);
+        @include make-col(3.5);
     }
 
-    // 1
-    &:not(:first-of-type) {
-        @include media-breakpoint-down(sm) {
-            margin-top: $unit*4;
-        }
+    @include media-breakpoint-up(lg) {
+        @include make-col(2.5);
     }
 
-    // 2
-    &:nth-of-type(n+3) {
-        @include media-breakpoint-up(md) {
-            margin-top: $unit*4;
-        }
+    @include media-breakpoint-up(xl) {
+        @include make-col(2.3);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        @include make-col(1.9);
     }
 }
 
@@ -45,10 +78,15 @@
     text-decoration: none;
 
     html.no-touchevents &:hover {
-        .c-listing__item-title {
-            background-size: 100% 2px;
-        }
+
     }
+}
+
+.c-listing__item-number {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: -25%;
 }
 
 .c-listing__item-media-container {
@@ -56,24 +94,20 @@
 }
 
 .c-listing__item-media-wrapper {
-
+    @include aspect-ratio(16, 9);
 }
 
 .c-listing__item-media {
-    height: auto;
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
 
 .c-listing__item-title {
-    @include anchor(2px);
-    @include heading-h3;
-    display: inline-block;
-    margin-top: $unit;
-}
-
-.c-listing__item-summary {
-    margin-top: $unit;
+    position: absolute;
+    top: -50px;
+    z-index: -1;
+    opacity: 0;
 }
 
 
@@ -88,3 +122,13 @@
 // -----------------------------------------------------------------------------
 
 // 1
+
+.c-listing--featured {
+    .c-listing__item-media-wrapper {
+        @include aspect-ratio(4, 3);
+    }
+
+    .c-listing__item-media {
+        padding-left: 50%;
+    }
+}

@@ -33,7 +33,7 @@ function Index(c) {
                     <h2 className="heading-h1">Components</h2>
                     <ul style={{marginTop: "20px"}}>
                         <li><a href="/component-blog-article">Blog Article</a></li>
-                        <li><a href="/component-blog-listing">Blog Listing</a></li>
+                        <li><a href="/component-listing">Listing</a></li>
                         <li><a href="/component-cookiebar">Cookie Bar</a></li>
                         <li><a href="/component-footer">Footer</a></li>
                         <li><a href="/component-masthead">Masthead</a></li>

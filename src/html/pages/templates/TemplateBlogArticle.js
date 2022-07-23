@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import BlogArticle from '../../components/BlogArticle'
-import BlogListing from '../../components/BlogListing'
+import Listing from '../../components/Listing'
 
 function TemplateBlogArticle() {
     return (
@@ -15,7 +15,7 @@ function TemplateBlogArticle() {
         <main id="main-content">
             <article id="js-blog-article-content">
                 <BlogArticle />
-                <BlogListing header="Featured articles" featured />
+                <Listing header="Featured articles" featured />
             </article>
         </main>
         <Footer />

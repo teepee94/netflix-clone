@@ -10,7 +10,7 @@ import Grid from "./styleguide/html/Grid";
 
 // Component Pages
 import ComponentBlogArticle from "./html/pages/components/ComponentBlogArticle";
-import ComponentBlogListing from "./html/pages/components/ComponentBlogListing";
+import ComponentListing from "./html/pages/components/ComponentListing";
 import ComponentCookiebar from "./html/pages/components/ComponentCookiebar";
 import ComponentFooter from "./html/pages/components/ComponentFooter";
 import ComponentMasthead from "./html/pages/components/ComponentMasthead";
@@ -32,7 +32,7 @@ root.render(
 			<Route exact path="/styleguide" element={<Styleguide styleguideTextColor="#ffff" />} />
 			<Route exact path="/grid" element={<Grid styleguideTextColor="#fff" />} />
 			<Route exact path="/component-blog-article" element={<ComponentBlogArticle />} />
-			<Route exact path="/component-blog-listing" element={<ComponentBlogListing />} />
+			<Route exact path="/component-listing" element={<ComponentListing />} />
 			<Route exact path="/component-cookiebar" element={<ComponentCookiebar />} />
 			<Route exact path="/component-footer" element={<ComponentFooter />} />
 			<Route exact path="/component-masthead" element={<ComponentMasthead />} />
