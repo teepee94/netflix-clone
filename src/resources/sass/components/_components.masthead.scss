@@ -92,7 +92,7 @@
 }
 
 .c-masthead__summary {
-    @include para-large;
+    @include para;
     margin-top: $unit*2;
 }
 
