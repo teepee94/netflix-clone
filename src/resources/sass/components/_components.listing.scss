@@ -46,6 +46,7 @@
 
 .c-listing__header-title {
     @include heading-h3;
+    width: 90%;
 }
 
 .c-listing__item {

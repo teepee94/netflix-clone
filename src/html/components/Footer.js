@@ -1,6 +1,5 @@
 import React from 'react'
 import FacebookIcon from '../../resources/icons/FacebookIcon'
-import GithubIcon from '../../resources/icons/GithubIcon'
 import InstagramIcon from '../../resources/icons/InstagramIcon'
 import TwitterIcon from '../../resources/icons/TwitterIcon'
 import YoutubeIcon from '../../resources/icons/YoutubeIcon'
@@ -77,10 +76,6 @@ function Footer(c) {
                 <div className="row">
                     <div className="c-footer__copyright-container">
                         <p className="c-footer__copyright">© <a href="https://tommyparkinson.com" className="c-footer__copyright-link">tommyparkinson</a> | Netflix Copy 2022</p>
-                        <a href="https://github.com/teepee94/netflix-clone" className="c-footer__copyright-github" target="_blank">
-                            <span className="u-visually-hide">View on Github</span>
-                            <GithubIcon />
-                        </a>
                     </div>
                 </div>
             </div>
