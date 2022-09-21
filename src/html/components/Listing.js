@@ -29,9 +29,25 @@ function Listing(c) {
                 </div> : ""
                 }
                 <div className="row">
-                    {listingItems.map((listingItem, index) => (
-                        <ListingItem key={listingItem.id} title={listingItem.name} image={c.featured ? listingItem.poster_path : listingItem.backdrop_path} number={index+1} featured={c.featured} />
-                    ))}
+                    {listingItems.map((listingItem, index) => {
+                        let image;
+
+                        if(c.featured) {
+                            if(listingItem.poster_path != null) {
+                                image = listingItem.poster_path;
+                            } else {
+                                image = listingItem.backdrop_path;
+                            }
+                        } else {
+                            if(listingItem.backdrop_path != null) {
+                                image = listingItem.backdrop_path;
+                            } else {
+                                image = listingItem.poster_path;
+                            }
+                        }
+
+                        return <ListingItem key={listingItem.id} title={listingItem.name} image={image} number={index+1} featured={c.featured} />
+                    })}
                 </div>
             </div>
         </div>
